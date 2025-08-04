@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcolatore Investimenti</title>
+    <!-- Collegamento a style.css, che ora importa il font Nunito -->
     <link rel="stylesheet" href="style.css">
+    <!-- Favicon stile Apple (emoji) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💹</text></svg>">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Calcolatore Investimenti</h1>
-            <p>Rendimento annuo fisso del 6% con interesse composto.</p>
+            <h1>calcolatore investimenti</h1>
+            <p class="sottotitolo-pagina">
+                Rendimento annuo fisso del 6% con interesse composto.<br>
+                <small>(Tasso medio realistico per un portafoglio bilanciato a lungo termine)</small>
+            </p>
         </header>
 
         <main>
@@ -18,7 +24,7 @@
                 <div class="input-group">
                     <label for="investimentoMensile">💲 Investimento Mensile</label>
                     <input type="number" id="investimentoMensile" value="200">
-                    <input type="range" id="investimentoSlider" min="50" max="1000" step="50" value="200">
+                    <input type="range" id="investimentoSlider" min="50" max="2000" step="50" value="200">
                 </div>
                 <div class="input-group">
                     <label for="durataAnni">🗓️ Durata (Anni)</label>
@@ -29,7 +35,7 @@
 
             <section class="card results-card">
                 <header class="results-header">
-                    <h2>↗️ Risultati Proiezione</h2>
+                    <h2>↗️ risultati proiezione</h2>
                 </header>
                 <div class="results-grid">
                     <div class="result-item">
@@ -42,11 +48,15 @@
                         <span id="percentualeInteressi" class="interest-percentage"></span>
                     </div>
                 </div>
+
+                <!-- TESTO SPOSTATO QUI -->
+                <p id="testoRiepilogo" class="summary-text"></p>
+                
                 <div class="result-final">
                     <p>Valore Finale</p>
                     <span id="valoreFinale"></span>
                 </div>
-                <p id="testoRiepilogo" class="summary-text"></p>
+                
                 <div class="display-bar-container">
                     <div class="display-bar">
                         <div id="barraCapitale"></div>
