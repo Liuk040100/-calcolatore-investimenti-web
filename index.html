@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatore Investimenti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Calcolatore Investimenti</h1>
+            <p>Rendimento annuo fisso del 6% con interesse composto.</p>
+        </header>
+
+        <main>
+            <section class="card input-card">
+                <div class="input-group">
+                    <label for="investimentoMensile">💲 Investimento Mensile</label>
+                    <input type="number" id="investimentoMensile" value="200">
+                    <input type="range" id="investimentoSlider" min="50" max="1000" step="50" value="200">
+                </div>
+                <div class="input-group">
+                    <label for="durataAnni">🗓️ Durata (Anni)</label>
+                    <input type="number" id="durataAnni" value="21">
+                    <input type="range" id="durataSlider" min="1" max="50" step="1" value="21">
+                </div>
+            </section>
+
+            <section class="card results-card">
+                <header class="results-header">
+                    <h2>↗️ Risultati Proiezione</h2>
+                </header>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <p>Capitale Investito</p>
+                        <span id="capitaleInvestito"></span>
+                    </div>
+                    <div class="result-item">
+                        <p>Interessi Maturati</p>
+                        <span id="interessiMaturati" class="interest-value"></span>
+                        <span id="percentualeInteressi" class="interest-percentage"></span>
+                    </div>
+                </div>
+                <div class="result-final">
+                    <p>Valore Finale</p>
+                    <span id="valoreFinale"></span>
+                </div>
+                <p id="testoRiepilogo" class="summary-text"></p>
+                <div class="display-bar-container">
+                    <div class="display-bar">
+                        <div id="barraCapitale"></div>
+                        <div id="barraInteressi"></div>
+                    </div>
+                    <div class="bar-labels">
+                        <span>Capitale Investito</span>
+                        <span>Interessi Composti</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
